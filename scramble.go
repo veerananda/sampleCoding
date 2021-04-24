@@ -11,8 +11,6 @@ import (
         )
 
 func checkScrambleExistence(one string,two string) bool {
-fmt.Println(one)
-fmt.Println(two)
 map1:=make(map[string]int)
 map2:=make(map[string]int)
 length:=len(one)
@@ -60,7 +58,6 @@ scanner.Split(bufio.ScanLines)
 for scanner.Scan(){
 result=false
 data3:=scanner.Text()
-fmt.Println(data3)
 if strings.Contains(string(data1),string(data3)) {
         count++
         continue
@@ -71,7 +68,6 @@ if data1[i] == data3[0]{
 if data1[i+v2-1] == data3[v2-1]{
 chopString:=data1[i:i+v2]
 result=checkScrambleExistence(string(data3),string(chopString))
-fmt.Println(result)
 }
 }
 if result==true {
